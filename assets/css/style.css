@@ -840,5 +840,229 @@
     .contact-hero .hero-text {
       padding: 1.5rem;
     }
+    /* === Mobile Nav Improvements === */
+.navbar {
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.hamburger {
+  display: block;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.nav-center {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+.nav-center.active {
+  display: flex;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-links a {
+  color: #0D0D0D; /* darker text on white bg */
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Prevent overlap with hero */
+.hero,
+.class-hero,
+.video-hero,
+.contact-hero {
+  margin-top: 70px; /* optional if sticky navbar covers it */
+}
+
+/* existing styles untouched above */
+
+/* === Mobile Responsiveness Enhancements === */
+
+@media (max-width: 1024px) {
+  .about-content, .class-cards, .schedule-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+.classes-header {
+  flex-direction: column;
+  align-items: center;
+}
+
+  .class-type-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .class-type-content img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .carousel-item iframe {
+    width:300px;
+    height: 400px;
+  }
+
+  .carousel-wrapper {
+    padding: 0 1rem;
+  }
+
+  .about-content img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero, .class-hero, .schedule-hero, .booking-hero, .contact-hero, .video-hero, .wellness-hero {
+    height: auto;
+    padding: 2rem 1rem;
+    flex-direction: column;
+  }
+
+  .hero-text {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+  .hero h1, .class-hero h1, .schedule-hero h1, .booking-hero h1, .contact-hero h1, .video-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .class-card, .schedule-day {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .booking-form, .contact-form {
+    padding: 1.5rem;
+  }
+
+  .carousel-item iframe {
+    height: 200px;
+  }
+
+  .filter-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .blog-article {
+    padding: 1.5rem;
+  }
+
+  .blog-article h2 {
+    font-size: 1.4rem;
+  }
+
+  .book-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-left, .nav-right {
+    flex: 0;
+  }
+
+  .external-schedule .external-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .video-title {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-form-section,
+  .contact-form-container,
+  .site-wrapper,
+  .carousel-wrapper,
+  .wellness-text,
+  .hero-text {
+    padding: 1rem;
+  }
+
+  .carousel-title,
+  .classes-header h2,
+  .schedule-day h2,
+  .blog-article h2,
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-item iframe {
+    height: 180px;
+  }
+
+  .video-title {
+    font-size: 0.95rem;
+  }
+
+  .class-cards {
+    padding: 0 1rem;
+  }
+
+  .class-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* Fix footer sticking to bottom */
+body, html {
+  height: 30px;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 30px;
+}
+
+.site-footer {
+  margin-top: auto;
+}
+/* end of responsive additions */
   }
   
