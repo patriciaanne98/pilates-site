@@ -609,6 +609,106 @@
   background-color: #8a6537;
 }
 
+/* Schedule Page Styles */
+
+.schedule-hero {
+  background: url('https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1600') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.schedule-hero .hero-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  color: #fff;
+  max-width: 700px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-grid {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.schedule-day {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.schedule-day h2 {
+  font-size: 1.5rem;
+  color: #A67C49;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.schedule-day ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-day li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.external-schedule {
+  text-align: center;
+  margin: 3rem auto 5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.external-schedule .external-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #A67C49;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.external-schedule .external-link:hover {
+  background-color: #8a6537;
+}
+
+@media (max-width: 1024px) {
+  .schedule-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
   @media (max-width: 768px) {
     .nav-center {
       display: none;
