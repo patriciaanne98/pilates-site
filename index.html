@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pilates with Patricia</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="navbar">
+      <div class="nav-left">
+        <div class="logo">Pilates with Patricia</div>
+      </div>
+
+      <nav class="nav-center">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="wellness.html">Wellness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-right">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <a href="#" class="book-btn">Book a Class</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Move With Intention</h1>
+        <p>Empower your body and mind through personalized Pilates flows.</p>
+        <a href="#" class="cta-btn">View Class Schedule</a>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-content">
+        <img src="assets/img/patricia-2.jpg" alt="Patricia">
+        <div class="about-text">
+          <h2>Meet Patricia</h2>
+          <p>
+            Hi! I'm a certified Pilates instructor with years of hands-on experience helping people move better, feel stronger, and reconnect with their bodies.
+I’ve worked with everyone from first-timers to athletes, focusing on alignment, strength, and long-term mobility.</p> 
+<p>My sessions combine classical technique with a modern, no-fluff approach. It’s about progress you can feel — and actually enjoy.
+Whether we’re on the mat or the reformer, you’ll leave every session knowing you showed up for yourself — and that’s what it’s all about.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="classes">
+      <div class="classes-header">
+        <h2>Class Offerings</h2>
+        <p>Choose your flow—whether you’re here to sweat, stretch, or just reconnect.</p>
+      </div>
+
+      <div class="class-cards">
+        <div class="class-card">
+          <h3>Mat Pilates (Beginner)</h3>
+          <p>Gentle foundational flows to build core strength and alignment.</p>
+          <a href="#" class="book-now">Book Now</a>
+        </div>
+
+        <div class="class-card">
+          <h3>Reformer Pilates</h3>
+          <p>Equipment-based session for strength, posture, and deep core burn.</p>
+          <a href="#" class="book-now">Book Now</a>
+        </div>
+
+        <div class="class-card">
+          <h3>Private Sessions</h3>
+          <p>Customized one-on-one sessions for targeted goals and support.</p>
+          <a href="#" class="book-now">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Pilates with Patricia. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-center');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos – Pilates with Patricia</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="site-wrapper">
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">Pilates with Patricia</div>
+    </div>
+    <nav class="nav-center">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="videos.html" class="active">Videos</a></li>
+        <li><a href="wellness.html">Wellness</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <a href="#" class="book-btn">Book a Class</a>
+    </div>
+  </header>
+  
+  <section class="carousel-section">
+    <h2 class="carousel-title">Featured Flows</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
+  
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-item">
+          <iframe src="https://www.youtube.com/embed/mfblPnGzRlo" allowfullscreen></iframe>
+          <p class="video-title">10-Min Core Burn</p>
+        </div>
+        <div class="carousel-item">
+          <iframe src="https://www.youtube.com/embed/sD_5jz0OW9g" allowfullscreen></iframe>
+          <p class="video-title">Gentle Stretch Flow</p>
+        </div>
+        <div class="carousel-item">
+          <iframe src="https://www.youtube.com/embed/bieD9B_bP6U" allowfullscreen></iframe>
+          <p class="video-title">Glutes + Hamstrings</p>
+        </div>
+      </div>
+  
+      <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>
+    </div>
+  </section>
+  
+  <footer class="site-footer">
+    <p>&copy; 2025 Pilates with Patricia. All rights reserved.</p>
+  </footer>
+    </div>
+    <script>
+      let index = 0;
+      function scrollCarousel(direction) {
+        const track = document.getElementById('carousel-track');
+        const itemWidth = track.querySelector('.carousel-item').offsetWidth + 32; // including gap
+        index += direction;
+    
+        if (index < 0) index = 0;
+        if (index > track.children.length - 1) index = track.children.length - 1;
+    
+        track.style.transform = `translateX(-${index * itemWidth}px)`;
+      }
+    </script>    
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-center');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
