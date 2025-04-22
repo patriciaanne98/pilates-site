@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Class – Pilates with Patricia</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/book.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="index.html" class="logo">Pilates with Patricia</a>
+      </div>
+      <nav class="nav-center">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="wellness.html">Wellness</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <a href="book.html" class="book-btn active">Book a Class</a>
+      </div>
+    </header>
+
+    <section class="booking-hero">
+      <div class="hero-text">
+        <h1>Book a Class</h1>
+        <p>Secure your spot in one of Patricia's Pilates sessions. Complete the form to request a booking and payment link.</p>
+      </div>
+    </section>
+
+    <section class="booking-form-section">
+      <form class="booking-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="class">Select a Class Type</label>
+        <select id="class" name="class" required>
+          <option value="">-- Choose One --</option>
+          <option value="mat">Mat Pilates</option>
+          <option value="reformer">Reformer Pilates</option>
+          <option value="private">Private 1:1 Session</option>
+        </select>
+
+        <label for="package">Session Type</label>
+        <select id="package" name="package" required>
+          <option value="">-- Choose One --</option>
+          <option value="single">Single Session</option>
+          <option value="pack">10-Class Package</option>
+        </select>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="payment">Preferred Payment Method</label>
+        <select id="payment" name="payment" required>
+          <option value="">-- Choose One --</option>
+          <option value="venmo">Venmo</option>
+          <option value="paypal">PayPal</option>
+          <option value="zelle">Zelle</option>
+          <option value="invoice">Email Me an Invoice</option>
+        </select>
+
+        <label for="message">Additional Notes (Optional)</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit Booking Request</button>
+      </form>
+
+      <p class="disclaimer">
+        Once you submit this form, you'll receive a confirmation email and payment instructions based on your preferred method. Spots are confirmed after payment is received.
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Pilates with Patricia. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.nav-center');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
+
